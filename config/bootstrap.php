@@ -12,11 +12,12 @@
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
 
-Plugin::loadAll([
-    ['ignoreMissing' => true, 'bootstrap' => true, 'routes' => true],
-    'BootstrapUI',
-    'Garderobe/Core',
-]);
+// NOTE: Plugin::loadAll() is deprecated, it's temporary solution
+// Plugin::loadAll([
+//     ['ignoreMissing' => true, 'bootstrap' => true, 'routes' => true],
+//     'BootstrapUI',
+//     'Garderobe/Core',
+// ]);
 
 Configure::write('Garderobe.Plugin.Bootstrap3', [
     'name' => 'Garderobe/Bootstrap3',

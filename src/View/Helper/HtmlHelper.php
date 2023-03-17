@@ -46,7 +46,8 @@ class HtmlHelper extends BaseHtmlHelper {
  * @return string An `<a />` element.
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::link
  */
-	public function link($title, $url = null, array $options = array()) {
+	public function link($title, $url = null, array $options = array()): string
+	{
 		if(isset($options['icon'])){
 			$title = $this->icon($options['icon']).' '.$title;
 			unset($options['icon']);
@@ -69,7 +70,8 @@ class HtmlHelper extends BaseHtmlHelper {
  * @return string The formatted tag element
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::tag
  */
-	public function tag($name, $text = null, array $options = array()) {
+	public function tag($name, $text = null, array $options = array()): string
+	{
 		if(isset($options['icon'])){
 			$text = $this->icon($options['icon']).' '.$text;
 			unset($options['icon']);
@@ -78,7 +80,7 @@ class HtmlHelper extends BaseHtmlHelper {
 		return parent::tag($name, $text, $options);
 	}
 
-    public function icon($name, array $options = [])
+    public function icon($name, array $options = []): string
     {
         //TODO: make icon agnostic and as helper config option
         if(!isset($options['iconSet'])){
